@@ -1,0 +1,10 @@
+CREATE TABLE user_addresses (
+ id BIGINT AUTO_INCREMENT PRIMARY KEY,
+ user_id BIGINT,
+ label VARCHAR(50),
+ address TEXT,
+ latitude DECIMAL(10,8),
+ longitude DECIMAL(11,8),
+ created_at TIMESTAMP NULL,
+ FOREIGN KEY (user_id) REFERENCES users(id)
+);
